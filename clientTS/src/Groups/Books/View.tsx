@@ -3,26 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
-import {useBookModel} from './Books.model.js';
-import { DataTable, Loading } from 'carbon-components-react';
-const {
-  TableContainer,
-  Table,
-  TableHead,
-  TableRow,
-  TableBody,
-  TableCell,
-  TableHeader,
-} = DataTable;
+import React, { FunctionComponent } from 'react';
+import { useBookModel } from './Books.model.js';
+import { DataTable, TableBody, TableCell, TableContainer, Table, TableHead, TableRow, TableHeader, Loading } from 'carbon-components-react';
 
-export const Books = () => {
+export const Books: FunctionComponent = () => {
   const { loading, error, books } = useBookModel();
 
   if (loading) return <Loading />;
   if (error) {
     console.log(error);
-    return `Error! ${error.message}`;
+    return <div>{`Error! ${error.message}`}</div>;
   }
 
   return (<DataTable headers={[
@@ -33,7 +24,7 @@ export const Books = () => {
     {
       header: 'Author',
       key: 'author'
-    }]} rows={books.map((book, index) => ({id: `${index}-${book.title}`, ...book}))} render={({ rows, headers, getHeaderProps }) => (
+    }]} rows={books.map((book, index) => ({ id: `${index}-${book.title}`, ...book }))} render={({ rows, headers, getHeaderProps }) => (
       <TableContainer title="DataTable">
         <Table>
           <TableHead>
@@ -56,5 +47,5 @@ export const Books = () => {
           </TableBody>
         </Table>
       </TableContainer>
-    )}/>);
+    )} />);
 };

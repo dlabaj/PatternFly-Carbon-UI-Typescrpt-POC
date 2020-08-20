@@ -4,3 +4,4 @@
  */
 
 export * from './View'; // webpack alias will look for View.{type}.js in this directory
+export * from './ViewInterface';

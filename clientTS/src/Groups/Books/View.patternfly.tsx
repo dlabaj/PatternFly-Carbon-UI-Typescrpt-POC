@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import {useBookModel} from './Books.model.js';
 import {
     Table,
@@ -12,13 +12,13 @@ import {
   } from '@patternfly/react-table';
   import { Spinner } from '@patternfly/react-core';
 
-export const Books = () => {
+export const Books: FunctionComponent<any> = () => {
   const { loading, error, books } = useBookModel();
 
   if (loading) return <Spinner />;
   if (error) {
     console.log(error);
-    return `Error! ${error.message}`;
+    return <div>{`Error! ${error.message}`}</div>;
   }
   return ( <Table aria-label="Simple Table" cells={[
     'Title',
