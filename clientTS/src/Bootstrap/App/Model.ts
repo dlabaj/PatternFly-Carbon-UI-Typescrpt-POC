@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useIntrospect } from '../Hooks';
+import { useIntrospect } from 'Hooks';
 import { get } from 'lodash';
 
 const getFlags = (modelFromSchema) => ({

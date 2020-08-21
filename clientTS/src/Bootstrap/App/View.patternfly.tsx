@@ -7,12 +7,12 @@ import React, { FunctionComponent } from 'react';
 import { useAppModel } from './Model.js';
 
 // needs thought
-import 'carbon-components/scss/globals/scss/styles.scss';
+import '@patternfly/react-core/dist/styles/base.css';
 
-import { Books, AddBook } from '../Groups';
+import { Books, AddBook } from 'Groups';
 
-import { Heading } from '../Elements'
-import { Loading } from 'carbon-components-react';
+import { Heading } from 'Elements'
+import { Spinner } from '@patternfly/react-core';
 
 export const App:FunctionComponent = () => {
 
@@ -22,14 +22,15 @@ export const App:FunctionComponent = () => {
   let jsx;
 
   if (loading) {
-    jsx = (<Loading />);
+    jsx = (<Spinner />);
   } else if (error) {
   jsx = (<span>{JSON.stringify(error)}</span>);
   } else {
     jsx = (     <React.Fragment>
-      <Heading level={1}>Carbon Book page</Heading>
-      {CREATE && <AddBook />}
+      <Heading>Patternfly Book page</Heading>
+     
       {LIST && <Books />} 
+      {CREATE && <AddBook />}
       </React.Fragment> );
   }
 
@@ -38,4 +39,3 @@ export const App:FunctionComponent = () => {
 {jsx}
     </React.Fragment>
 );};
-

@@ -7,7 +7,7 @@ import React, { FunctionComponent } from 'react';
 import {useAddBookModel} from './AddBook.model.js';
 
 import { TextInput, Button } from 'carbon-components-react';
-import { Heading } from '../../Elements';
+import { Heading } from 'Elements';
 
 export const AddBook: FunctionComponent = () => {
   const {onTitleChange, onAuthorChange, isInvalid, addNewBook} = useAddBookModel();

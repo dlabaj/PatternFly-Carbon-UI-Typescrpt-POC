@@ -8,7 +8,7 @@ import {useAddBookModel} from './AddBook.model.js';
 
 import { TextInput, Button } from '@patternfly/react-core';
 
-import { Heading } from '../../Elements';
+import { Heading } from 'Elements';
 
 export const AddBook = () => {
   const {onTitleChange, onAuthorChange, isInvalid, addNewBook} = useAddBookModel(value => value);
