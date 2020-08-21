@@ -4,7 +4,7 @@
  */
 
 import React, { FunctionComponent } from 'react';
-import {useAddBookModel} from './AddBook.model ';
+import {useAddBookModel} from './AddBook.model';
 
 import { TextInput, Button } from 'carbon-components-react';
 import { Heading } from 'Elements';

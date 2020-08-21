@@ -4,7 +4,7 @@
  */
 
 import React, { FunctionComponent } from 'react';
-import {HeadingProps} from './ViewInterface';
+import {HeadingProps} from './View.interface';
 
 export const Heading: FunctionComponent<HeadingProps> = ({level, children, ...others}: HeadingProps) => {
     let jsx;

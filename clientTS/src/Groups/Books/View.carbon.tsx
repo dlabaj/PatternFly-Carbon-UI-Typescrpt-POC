@@ -4,7 +4,7 @@
  */
 
 import React, { FunctionComponent } from 'react';
-import { useBookModel } from './Books.model ';
+import { useBookModel } from './Books.model';
 import { DataTable, TableBody, TableCell, TableContainer, Table, TableHead, TableRow, TableHeader, Loading } from 'carbon-components-react';
 
 export const Books: FunctionComponent = () => {
