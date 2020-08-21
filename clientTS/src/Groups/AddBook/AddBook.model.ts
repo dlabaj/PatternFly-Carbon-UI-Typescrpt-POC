@@ -6,7 +6,7 @@
 import { useMutation } from '@apollo/react-hooks';
 import { debounce } from 'lodash';
 import { useState, useCallback } from 'react';
-import {ADD_BOOK} from '../../Utils/Queries.gql.js';
+import {ADD_BOOK} from '../../Utils/Queries.gql';
 
 const TIME = 100;
 

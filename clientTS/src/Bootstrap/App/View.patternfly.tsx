@@ -4,7 +4,7 @@
  */
 
 import React, { FunctionComponent } from 'react';
-import { useAppModel } from './Model.js';
+import { useAppModel } from './Model';
 
 // needs thought
 import '@patternfly/react-core/dist/styles/base.css';

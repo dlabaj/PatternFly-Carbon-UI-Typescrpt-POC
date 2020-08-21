@@ -4,7 +4,7 @@
  */
 
 import React, { FunctionComponent } from 'react';
-import {useBookModel} from './Books.model.js';
+import {useBookModel} from './Books.model';
 import {
     Table,
     TableHeader,

@@ -3,4 +3,4 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export * from 'View'; // webpack alias will look for View.{type}.js in this directory
+export * from 'View'; // webpack alias will look for View.{type}  in this directory

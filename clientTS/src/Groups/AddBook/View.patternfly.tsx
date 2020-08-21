@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import {useAddBookModel} from './AddBook.model.js';
+import {useAddBookModel} from './AddBook.model';
 
 import { TextInput, Button } from '@patternfly/react-core';
 

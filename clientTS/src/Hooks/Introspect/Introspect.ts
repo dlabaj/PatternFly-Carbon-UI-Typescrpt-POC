@@ -4,7 +4,7 @@
  */
 
 import { useQuery } from '@apollo/react-hooks';
-import {INTROSPECT} from 'Utils/Queries.gql.js';
+import {INTROSPECT} from 'Utils/Queries.gql';
 import {get} from 'lodash';
 
 const GQL_STRING = 'String';

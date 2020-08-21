@@ -4,7 +4,7 @@
  */
 
 import { useQuery } from '@apollo/react-hooks';
-import {GET_BOOKS, BOOKS_SUBSCRIPTION} from '../../Utils/Queries.gql.js';
+import {GET_BOOKS, BOOKS_SUBSCRIPTION} from '../../Utils/Queries.gql';
 import { useEffect } from 'react';
 
 const bookSortByName = (bookA, bookB) => {
