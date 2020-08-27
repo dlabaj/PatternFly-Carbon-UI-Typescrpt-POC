@@ -3106,6 +3106,20 @@ carbon-components-react@^7.17.0:
     warning "^3.0.0"
     window-or-global "^1.0.1"
 
+carbon-components@^10.18.0:
+  version "10.18.0"
+  resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-10.18.0.tgz#23b61ecb7cba766f47c7e0e96278a4d4bb37e8f2"
+  integrity sha512-BZE1PaWP8KrmbV1JSfPEsIWBeNz255eQ2hGP4Uo5Rh4uaL891BJjVTWjhnHEIeu1VXXjtxZ3Vk6qPcCGYL7brw==
+  dependencies:
+    flatpickr "4.6.1"
+    lodash.debounce "^4.0.8"
+    warning "^3.0.0"
+
+carbon-icons@^7.0.7:
+  version "7.0.7"
+  resolved "https://registry.yarnpkg.com/carbon-icons/-/carbon-icons-7.0.7.tgz#ebafe3e9fa25df973796a8eca06d8a7c501cc610"
+  integrity sha512-3vgkdXJRgCViCrH3fLUdyAXo0I8wmohO6QETv7vWFx6yc7s+SirWFBSFL38zUx4MHtR8iTxIlLEzkeU6FlFtXg==
+
 case-sensitive-paths-webpack-plugin@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.3.0.tgz#23ac613cc9a856e4f88ff8bb73bbb5e989825cf7"
