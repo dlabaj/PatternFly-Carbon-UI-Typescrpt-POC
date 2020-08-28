@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "sourceMap": true,
     "target": "es5",
     "lib": [
       "dom",
@@ -15,9 +16,15 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "noImplicitAny": false,
+    "jsx": "react",
+    "baseUrl": "src",
+    "paths": {
+      "Elements/*": ["Elements/*"],
+      "Groups/*": ["Groups/*"],
+      "Hooks/*": ["Hooks/*"],
+      "Utils/*": ["Utils/*"]
+    }
   },
   "include": [
     "src"
