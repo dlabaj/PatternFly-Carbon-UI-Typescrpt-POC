@@ -30,7 +30,7 @@ export const Books: FunctionComponent = () => {
           <TableHead>
             <TableRow>
               {headers.map((header) => (
-                <TableHeader key={header.key} {...getHeaderProps({ header })}>
+                <TableHeader {...getHeaderProps({ header })}>
                   {header.header}
                 </TableHeader>
               ))}

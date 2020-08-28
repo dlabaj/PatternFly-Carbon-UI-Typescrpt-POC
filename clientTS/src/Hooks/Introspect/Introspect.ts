@@ -5,7 +5,6 @@
 
 import { useQuery } from '@apollo/react-hooks';
 import {INTROSPECT} from 'Utils/Queries.gql';
-import {get} from 'lodash';
 
 const GQL_STRING = 'String';
 const GQL_OBJECT = 'OBJECT';
@@ -70,9 +69,9 @@ const ourTypes = Object.values(model).map(entity => entity.type);
 export const useIntrospect = () => {
     const { loading, error, data } = useQuery(INTROSPECT);
 
-    const retrievedTypes = get(data, '__schema.types', []);
-    const retrievedMutations = get(data, '__schema.mutationType.fields', []);
-    const retrievedSubscriptions = get(data, '__schema.subscriptionType.fields', []);
+    const retrievedTypes = data ? data.__schema.types : [];
+    const retrievedMutations = data ? data.__schema.mutationType.fields : [];
+    const retrievedSubscriptions = data ? data.__schema.subscriptionType.fields : [];
     const expectedTypes = retrievedTypes.map(destructureTypes).filter(({name}) => ourTypes.includes(name));
 
     const modelFromSchema = Object.values(model).reduce((acc, expectedModel) => {

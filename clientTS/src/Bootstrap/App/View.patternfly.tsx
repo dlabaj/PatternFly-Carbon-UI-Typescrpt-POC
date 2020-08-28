@@ -27,7 +27,7 @@ export const App:FunctionComponent = () => {
   jsx = (<span>{JSON.stringify(error)}</span>);
   } else {
     jsx = (     <React.Fragment>
-      <Heading>Patternfly Book page</Heading>
+      <Heading level={1}>Patternfly Book page</Heading>
      
       {LIST && <Books />} 
       {CREATE && <AddBook />}

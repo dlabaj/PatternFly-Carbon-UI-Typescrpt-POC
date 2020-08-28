@@ -27,7 +27,7 @@ const apolloClient = new ApolloClient({
 
 ReactDOM.render(
   <React.StrictMode>
-    <ApolloProvider client={apolloClient}>
+    <ApolloProvider client={apolloClient as any}>
     <App />
     </ApolloProvider>
   </React.StrictMode>,

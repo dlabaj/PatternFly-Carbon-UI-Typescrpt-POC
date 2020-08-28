@@ -23,7 +23,7 @@ const bookSortByName = (bookA, bookB) => {
 
 export const useBookModel = () => {
     const { loading, error, data, subscribeToMore } = useQuery(GET_BOOKS);
-    const books = data ? [].concat(data.books.sort(bookSortByName)) : [];
+    const books = data ? [...data.books.sort(bookSortByName)] : [];
 
     useEffect(() => subscribeToMore({
             document: BOOKS_SUBSCRIPTION,

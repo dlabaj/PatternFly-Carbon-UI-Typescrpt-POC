@@ -4,13 +4,12 @@
  */
 
 import { useIntrospect } from 'Hooks';
-import { get } from 'lodash';
 
 const getFlags = (modelFromSchema) => ({
     PAGE: {
         BOOKS: {
-            LIST: get(modelFromSchema, 'Book.fields.title', false) &&  get(modelFromSchema, 'Book.fields.author', false),
-            CREATE: get(modelFromSchema, 'Book.operations.create', false)
+            LIST: modelFromSchema.Book.fields.title && modelFromSchema.Book.fields.author,
+            CREATE: modelFromSchema.Book.operations.create
         }
     }
 })
@@ -19,7 +18,7 @@ export const useAppModel = () => {
     const {loading, error, modelFromSchema } = useIntrospect();
 
     const flags = getFlags(modelFromSchema);
-    const getFeaturesForPage = (page) => get(flags, `PAGE.${page}`);
+    const getFeaturesForPage = (page) => flags.PAGE[page];
 
     return {loading, error, getFeaturesForPage};
 };
