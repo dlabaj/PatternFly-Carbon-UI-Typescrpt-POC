@@ -8,7 +8,7 @@ import { debounce } from '@patternfly/react-core';
 import { useState, useCallback } from 'react';
 import {ADD_BOOK} from '../../Utils/Queries.gql';
 
-const TIME = 100;
+const TIME: number = 100;
 
 const onChangeValueGetter = (evt) => evt.target.value;
 

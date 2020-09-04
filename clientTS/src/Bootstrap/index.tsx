@@ -7,20 +7,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './App';
 import { ApolloProvider } from '@apollo/react-hooks';
-import ApolloClient from 'apollo-client';
+import { ApolloClient } from 'apollo-client';
 import { SubscriptionClient } from 'subscriptions-transport-ws';
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { WebSocketLink } from "apollo-link-ws";
 
-const GRAPHQL_ENDPOINT = 'ws://localhost:7500/graphql';
+const GRAPHQL_ENDPOINT: string = 'ws://localhost:7500/graphql';
 
-const client = new SubscriptionClient(GRAPHQL_ENDPOINT, {
+const client: SubscriptionClient = new SubscriptionClient(GRAPHQL_ENDPOINT, {
   reconnect: true,
 });
 
-const link = new WebSocketLink(client);
+const link: WebSocketLink = new WebSocketLink(client);
 
-const apolloClient = new ApolloClient({
+const apolloClient = new ApolloClient ({
   link,
   cache: new InMemoryCache()
 });
