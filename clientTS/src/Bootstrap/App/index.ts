@@ -3,4 +3,4 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export * from './View.carbon'; // webpack alias will look for View.{type}.tsx in this directory
+export * from './View.carbon'; // webpack will replace View.patternfly for patternfly build
